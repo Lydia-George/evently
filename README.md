@@ -1,17 +1,49 @@
-# evently
+# Evently
 
-A new Flutter project.
+Evently is a Flutter mobile application for discovering events, viewing event details, and managing personal event bookings.
 
-## Getting Started
+The project is currently under development.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- User registration and login
+- Authentication state management
+- Browse available events
+- Search and filter events
+- View event details
+- Create event bookings
+- View personal bookings
+- User profile and logout
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Tech Stack
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter
+- Dart
+- Cubit / flutter_bloc
+- Dio
+- GetIt
+- Firebase Authentication
+- Ticketmaster Discovery API
+
+## Architecture
+
+The project follows a feature-based structure with separated responsibilities for presentation, state management, data access, networking, routing, and dependency injection.
+
+```text
+lib/
+├── core/
+│   ├── di/
+│   ├── networking/
+│   └── routes/
+└── features/
+    └── auth/
+        └── register/
+            ├── data/
+            └── presentation/
+```
+## Project Management
+
+Tasks and development progress are tracked on Trello:
+
+[Evently — Product Development Board](https://trello.com/b/F7CvnF0U/evently-product-development)
+
