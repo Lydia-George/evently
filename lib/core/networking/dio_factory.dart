@@ -1,18 +1,25 @@
-
 import 'package:dio/dio.dart';
+import 'package:evently/core/networking/api_constants.dart';
 import 'package:flutter/foundation.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
-class DioFactory{
-  late Dio dio;
+class DioFactory {
+  static late Dio _dio;
 
-  init(){
-    dio = Dio(BaseOptions(
-      baseUrl: '',
-    ));
+  static getDio() {
+    Duration duration = Duration(seconds: 30);
+    _dio = Dio(
+      BaseOptions(
+        baseUrl: ApiConstants.baseUrl,
+        receiveTimeout: duration,
+        connectTimeout: duration,
+        sendTimeout: duration,
+      ),
+    );
 
-// customization
-    dio.interceptors.add(PrettyDioLogger(
+    // customization
+    _dio.interceptors.add(
+      PrettyDioLogger(
         requestHeader: true,
         requestBody: true,
         responseBody: true,
@@ -21,8 +28,9 @@ class DioFactory{
         compact: true,
         maxWidth: 90,
         enabled: kDebugMode,
-
-    )
+      ),
     );
+
+    return _dio;
   }
 }

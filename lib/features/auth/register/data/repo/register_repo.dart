@@ -1,19 +1,12 @@
 
 import 'package:dio/dio.dart';
+import 'package:evently/core/networking/api_result.dart';
 
 class RegisterRepo {
 
-final Dio _dio;
 
 
-RegisterRepo(this._dio);
+RegisterRepo();
 
-  register() async{
-    try{
-      final response = await _dio.post('path', data: {});
-    }catch(e){
-
-    }
-  }
 
 }
