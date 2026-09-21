@@ -6,7 +6,7 @@ import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 class DioFactory {
   static late Dio _dio;
 
-  static getDio() {
+  static Dio getDio() {
     Duration duration = Duration(seconds: 30);
     _dio = Dio(
       BaseOptions(

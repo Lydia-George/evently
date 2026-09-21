@@ -16,5 +16,7 @@ class AppRouter {
               child: RegisterScreen(),
             ));
     }
+    return null;
+
   }
 }
