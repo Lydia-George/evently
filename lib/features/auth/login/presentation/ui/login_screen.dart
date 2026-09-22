@@ -177,7 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           text: AppStrings.dontHaveAccount,
                           actionText: AppStrings.signUp,
                           onPressed: () {
-                            Navigator.pushReplacementNamed(
+                            Navigator.pushNamed(
                               context,
                               AppRoutes.registerScreen,
                             );

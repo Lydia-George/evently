@@ -12,16 +12,16 @@ class AppRouter {
   static Route? onGenerateRoutes(RouteSettings settings) {
     switch (settings.name) {
       case AppRoutes.splashScreen:
-        return MaterialPageRoute(builder: (_) => SplashScreen());
+        return MaterialPageRoute(builder: (_) => const SplashScreen());
       case AppRoutes.registerScreen:
         return MaterialPageRoute(
           builder: (_) => BlocProvider(
             create: (context) => RegisterCubit(getIt()),
-            child: RegisterScreen(),
+            child: const RegisterScreen(),
           ),
         );
       case AppRoutes.loginScreen:
-        return MaterialPageRoute(builder: (_) => LoginScreen());
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
     }
     return null;
   }

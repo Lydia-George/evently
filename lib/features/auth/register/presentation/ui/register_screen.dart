@@ -1,9 +1,9 @@
 import 'package:evently/core/constants/app_strings.dart';
-import 'package:evently/core/routes/app_routes.dart';
 import 'package:evently/core/theme/app_spacing.dart';
 import 'package:evently/core/theme/app_text_styles.dart';
 import 'package:evently/core/widgets/app_button.dart';
 import 'package:evently/features/auth/widgets/auth_footer_action.dart';
+import 'package:evently/features/auth/widgets/auth_logo_header.dart';
 import 'package:flutter/material.dart';
 
 import 'package:evently/core/widgets/app_text_form_field.dart';
@@ -51,6 +51,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                AuthLogoHeader(),
                 SizedBox(height: AppSpacing.lg),
 
                 /// -- HEADING
@@ -184,7 +185,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   text: AppStrings.alreadyHaveAccount,
                   actionText: AppStrings.signIn,
                   onPressed: () {
-                    Navigator.pushNamed(context, AppRoutes.loginScreen);
+                    Navigator.pop(context);
                   },
                 ),
               ],

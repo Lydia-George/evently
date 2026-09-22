@@ -1,4 +1,5 @@
 import 'package:evently/core/constants/app_strings.dart';
+import 'package:evently/core/routes/app_routes.dart';
 import 'package:evently/core/theme/app_colors.dart';
 import 'package:evently/core/theme/app_text_styles.dart';
 import 'package:evently/core/widgets/app_logo_container.dart';
@@ -7,8 +8,25 @@ import 'package:evently/features/splash/presentation/widgets/splash_loading_dots
 import 'package:evently/features/splash/presentation/widgets/splash_fade_in_up.dart';
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatelessWidget {
+class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
+
+  @override
+  State<SplashScreen> createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    _navigateToLogin();
+  }
+
+  Future<void> _navigateToLogin() async {
+    await Future.delayed(Duration(seconds: 2));
+    if (!mounted) return;
+    Navigator.pushReplacementNamed(context, AppRoutes.loginScreen);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -64,13 +82,12 @@ class SplashScreen extends StatelessWidget {
                   Text(AppStrings.appName, style: AppTextStyles.heading),
                   SizedBox(height: 4),
                   Text(AppStrings.splashTxt, style: AppTextStyles.subtitle),
-                  const SizedBox(height: 24,),
+                  const SizedBox(height: 24),
                   SplashLoadingDots(),
                 ],
               ),
             ),
           ),
-
         ],
       ),
     );
