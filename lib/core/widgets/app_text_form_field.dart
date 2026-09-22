@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../constants/app_strings.dart';
 import '../theme/app_text_styles.dart';
+
 class AppTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final String hintText;

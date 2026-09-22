@@ -1,10 +1,9 @@
+import 'package:evently/core/constants/app_strings.dart';
+import 'package:evently/core/theme/app_colors.dart';
+import 'package:evently/core/theme/app_radius.dart';
 import 'package:evently/core/theme/app_spacing.dart';
 import 'package:evently/core/theme/app_text_styles.dart';
 import 'package:flutter/material.dart';
-
-import '../../../../../../core/constants/app_strings.dart';
-import '../../../../../../core/theme/app_colors.dart';
-import '../../../../../../core/theme/app_radius.dart';
 
 class PasswordStrengthIndicator extends StatelessWidget {
   final String password;

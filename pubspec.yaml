@@ -39,6 +39,7 @@ dependencies:
   get_it: ^9.2.1
   flutter_bloc: ^9.1.1
   flutter_dotenv: ^6.0.1
+  flutter_native_splash: ^2.4.7
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - .env
+    - assets/images/
+    - assets/images/evently_logo.png
+    - assets/images/evently_splash_logo.png
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
 

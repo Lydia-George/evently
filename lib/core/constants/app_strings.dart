@@ -23,6 +23,9 @@ class AppStrings {
 
   static const String signIn = 'Sign In';
 
+  // SPLASH SCREEN
+  static const String splashTxt = 'Find moments worth showing up for';
+
   /// -- TEXT FORM FIELDS TEXTS
   static const String nameHintTxt = 'Enter your full name';
   static const String emailHintTxt = 'you@example.com';

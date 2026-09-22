@@ -10,7 +10,7 @@ class EventlyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute:AppRoutes.registerScreen ,
+      initialRoute:AppRoutes.splashScreen ,
       onGenerateRoute: AppRouter.onGenerateRoutes,
       theme: AppTheme.darkTheme,
     );

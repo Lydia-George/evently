@@ -1,0 +1,10 @@
+flutter_native_splash:
+  color: "#080B16"
+  image: assets/images/evently_splash_logo.png
+
+  android_12:
+    color: "#080B16"
+    image: assets/images/evently_splash_logo.png
+
+  ios: true
+  android: true
