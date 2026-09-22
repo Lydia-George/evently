@@ -1,6 +1,7 @@
 class AppStrings {
   AppStrings._();
 
+  /// -- SIGN UP
   static const String appName = 'Evently';
 
   static const String createAccount = 'Create your account';
@@ -15,6 +16,7 @@ class AppStrings {
   static const String password = 'Password';
 
   static const String confirmPassword = 'Confirm Password';
+  static const String forgotPassword = 'Forgot Password ?';
 
   static const String createAccountButton = 'Create Account';
 
@@ -23,6 +25,23 @@ class AppStrings {
 
   static const String signIn = 'Sign In';
 
+  /// -- LOGIN
+  static const String welcomeBack = 'Welcome back';
+
+  static const String loginSubtitle =
+      'Sign in to continue discovering unforgettable events.';
+
+  static const String signInButton = 'Sign In';
+
+  static const String dontHaveAccount = "Don't have an account? ";
+
+  static const String signUp = 'Sign Up';
+  static const String or = 'or';
+
+  static const String continueWithGoogle = 'Continue with Google';
+
+
+
   // SPLASH SCREEN
   static const String splashTxt = 'Find moments worth showing up for';
 
@@ -30,6 +49,7 @@ class AppStrings {
   static const String nameHintTxt = 'Enter your full name';
   static const String emailHintTxt = 'you@example.com';
   static const String passwordHintTxt = 'Min. 8 characters';
+  static const String loginPasswordHintTxt = 'Enter your password';
   static const String confirmPasswordHintTxt = 'Re-enter your password';
 
 

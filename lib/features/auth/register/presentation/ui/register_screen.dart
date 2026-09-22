@@ -3,7 +3,7 @@ import 'package:evently/core/routes/app_routes.dart';
 import 'package:evently/core/theme/app_spacing.dart';
 import 'package:evently/core/theme/app_text_styles.dart';
 import 'package:evently/core/widgets/app_button.dart';
-import 'package:evently/features/auth/register/presentation/widgets/auth_footer_action.dart';
+import 'package:evently/features/auth/widgets/auth_footer_action.dart';
 import 'package:flutter/material.dart';
 
 import 'package:evently/core/widgets/app_text_form_field.dart';
