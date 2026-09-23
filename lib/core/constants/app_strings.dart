@@ -53,6 +53,11 @@ class AppStrings {
   static const String confirmPasswordHintTxt = 'Re-enter your password';
 
 
+  /// -- FIREBASE STRINGS
+  static const String fbRegisterSuccess = 'Account Created Successfully';
+  static const String fbRegisterErrorMsg = 'Registration failed';
+  static const String fbRegisterError = 'Something went wrong';
+
 
 
   /// -- TEXT FORM FIELDS VALIDATORS
