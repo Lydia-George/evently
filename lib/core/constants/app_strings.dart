@@ -54,9 +54,17 @@ class AppStrings {
 
 
   /// -- FIREBASE STRINGS
+  // REGISTER
   static const String fbRegisterSuccess = 'Account Created Successfully';
   static const String fbRegisterErrorMsg = 'Registration failed';
   static const String fbRegisterError = 'Something went wrong';
+
+  // LOGIN
+  static const String fbLoginSuccess = 'Logged in successfully';
+  static const String fbLoginErrorMsg = 'Login failed';
+  static const String fbLoginError = 'Something went wrong';
+
+
 
 
 

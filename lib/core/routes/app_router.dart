@@ -1,4 +1,6 @@
 import 'package:evently/core/di/service_locator.dart';
+import 'package:evently/features/auth/login/data/repo/login_repo.dart';
+import 'package:evently/features/auth/login/presentation/cubit/login_cubit.dart';
 import 'package:evently/features/auth/login/presentation/ui/login_screen.dart';
 import 'package:evently/features/auth/register/presentation/cubit/register_cubit.dart';
 import 'package:evently/features/auth/register/presentation/ui/register_screen.dart';
@@ -21,7 +23,12 @@ class AppRouter {
           ),
         );
       case AppRoutes.loginScreen:
-        return MaterialPageRoute(builder: (_) => const LoginScreen());
+        return MaterialPageRoute(
+          builder: (_) => BlocProvider(
+            create: (_) => LoginCubit(getIt<LoginRepo>()),
+            child: const LoginScreen(),
+          ),
+        );
     }
     return null;
   }
