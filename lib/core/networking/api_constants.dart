@@ -1,4 +1,4 @@
 class ApiConstants {
   static const String baseUrl = 'https://app.ticketmaster.com/discovery/v2/';
-
+  static const String eventsEndpoint = 'events.json';
 }

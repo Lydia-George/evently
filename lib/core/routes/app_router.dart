@@ -4,6 +4,7 @@ import 'package:evently/features/auth/login/presentation/cubit/login_cubit.dart'
 import 'package:evently/features/auth/login/presentation/ui/login_screen.dart';
 import 'package:evently/features/auth/register/presentation/cubit/register_cubit.dart';
 import 'package:evently/features/auth/register/presentation/ui/register_screen.dart';
+import 'package:evently/features/home/presentation/ui/home_screen.dart';
 import 'package:evently/features/splash/presentation/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -28,6 +29,10 @@ class AppRouter {
             create: (_) => LoginCubit(getIt<LoginRepo>()),
             child: const LoginScreen(),
           ),
+        );
+      case AppRoutes.homeScreen:
+        return MaterialPageRoute(
+            builder: (_) => const HomeScreen(),
         );
     }
     return null;

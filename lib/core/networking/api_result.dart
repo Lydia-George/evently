@@ -11,6 +11,6 @@ class Success<T> extends ApiResult<T>{
 }
 
 class Error<T> extends ApiResult<T>{
-  final T error ;
+  final String error ;
   const Error(this.error);
 }

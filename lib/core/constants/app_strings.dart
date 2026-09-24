@@ -65,6 +65,11 @@ class AppStrings {
   static const String fbLoginError = 'Something went wrong';
 
 
+  /// -- API
+  static const String messingApiKey = 'Ticketmaster API key is missing';
+
+
+
 
 
 

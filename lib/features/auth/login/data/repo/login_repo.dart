@@ -10,9 +10,9 @@ class LoginRepo {
   
   Future<ApiResult<String>> login({required String email, required String password})async{
     try{
-      await _firebaseAuth.signInWithEmailAndPassword(email: email.trim(), password: password.trim());
+      await _firebaseAuth.signInWithEmailAndPassword(email: email.trim(), password: password);
       return const Success(AppStrings.fbLoginSuccess);
-    }on FirebaseException catch(error){
+    }on FirebaseAuthException catch(error){
       return Error(error.message ?? AppStrings.fbLoginErrorMsg);
     }catch(error){
       return const Error(AppStrings.fbLoginError);
