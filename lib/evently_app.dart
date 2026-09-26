@@ -13,7 +13,6 @@ class EventlyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<AuthCubit>(
-      lazy: false,
       create: (_) => AuthCubit(getIt<AuthRepo>()),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,

@@ -21,7 +21,7 @@ class EventsRepo {
 
       final response = await _dio.get(
         ApiConstants.eventsEndpoint,
-        queryParameters: {'apikey': apiKey, 'size': 10},
+        queryParameters: {'apikey': apiKey, 'size': 50},
       );
 
       final data = response.data as Map<String, dynamic>;

@@ -9,6 +9,8 @@ import 'package:evently/features/splash/presentation/ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../features/events/data/repo/events_repo.dart';
+import '../../features/events/ui/cubit/events_cubit.dart';
 import 'app_routes.dart';
 
 class AppRouter {
@@ -32,7 +34,10 @@ class AppRouter {
         );
       case AppRoutes.homeScreen:
         return MaterialPageRoute(
-            builder: (_) => const HomeScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => EventsCubit(getIt<EventsRepo>())..getEvents(),
+            child: const HomeScreen(),
+          ),
         );
     }
     return null;

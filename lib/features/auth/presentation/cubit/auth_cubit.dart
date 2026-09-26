@@ -23,6 +23,10 @@ class AuthCubit extends Cubit<AuthState> {
     });
   }
 
+  String get userName{
+    return _authRepo.currentUser?.displayName ?? 'User';
+  }
+
   Future<void> logout() async{
     await _authRepo.logout();
   }
